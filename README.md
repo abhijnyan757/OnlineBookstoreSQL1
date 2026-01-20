@@ -58,11 +58,11 @@ Tracks customer orders for books.
 
 ## Features
 
-- ✅ Create and manage **Books, Customers, Orders** tables  
-- ✅ Import CSV data into tables using `COPY`  
-- ✅ Perform queries to retrieve, filter, and analyze data  
-- ✅ Calculate **total revenue**, **top-selling books**, **remaining stock**, and more  
-- ✅ Advanced SQL techniques: `JOINs`, `GROUP BY`, `ORDER BY`, `SUM()`, `AVG()`, `COALESCE`, `DISTINCT`  
+-  Create and manage **Books, Customers, Orders** tables  
+-  Import CSV data into tables using `COPY`  
+-  Perform queries to retrieve, filter, and analyze data  
+-  Calculate **total revenue**, **top-selling books**, **remaining stock**, and more  
+-  Advanced SQL techniques: `JOINs`, `GROUP BY`, `ORDER BY`, `SUM()`, `AVG()`, `COALESCE`, `DISTINCT`  
 
 ---
 
