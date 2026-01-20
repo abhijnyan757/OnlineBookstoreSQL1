@@ -54,3 +54,41 @@ Tracks customer orders for books.
 | Total_Amount | NUMERIC(10, 2)  | Total price for the order             |
 
 
+---
+
+## Features
+
+- ✅ Create and manage **Books, Customers, Orders** tables  
+- ✅ Import CSV data into tables using `COPY`  
+- ✅ Perform queries to retrieve, filter, and analyze data  
+- ✅ Calculate **total revenue**, **top-selling books**, **remaining stock**, and more  
+- ✅ Advanced SQL techniques: `JOINs`, `GROUP BY`, `ORDER BY`, `SUM()`, `AVG()`, `COALESCE`, `DISTINCT`  
+
+---
+
+## Sample Queries
+
+```sql
+-- Retrieve all Fiction books
+SELECT *
+FROM Books
+WHERE Genre = 'Fiction';
+
+-- Calculate total revenue
+SELECT SUM(Total_Amount) AS Revenue
+FROM Orders;
+
+-- Find the top 3 most expensive Fantasy books
+SELECT *
+FROM Books
+WHERE Genre = 'Fantasy'
+ORDER BY Price DESC
+LIMIT 3;
+
+-- Find the most frequently ordered book
+SELECT o.Book_ID, b.Title, COUNT(o.Order_ID) AS Order_Count
+FROM Orders o
+JOIN Books b ON o.Book_ID = b.Book_ID
+GROUP BY o.Book_ID, b.Title
+ORDER BY Order_Count DESC
+LIMIT 1;
